@@ -1,25 +1,41 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import RatingGroup from './components/RatingGroup';
+import { ratingGroups } from './data';
+import PrintResults from './components/PrintResults';
+import Header from './components/Header';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      ratingGroups,
+    };
+  }
+
+  changeRating(name) {
+    return (event) => {
+      const value = event.target.value;
+      this.setState((state) => {
+        const ratingGroups = state.ratingGroups.map((group) => (
+          group.name === name ? { ...group, rating: value } : group
+        ))
+
+        return { ratingGroups } 
+      });
+    }
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="app">
+        <Header />
+        <div className="main-form">
+          { this.state.ratingGroups.map((group) => (
+            <RatingGroup key={group.name} group={group} onChange={this.changeRating(group.name)} />
+          ))}
+        </div>
+        <PrintResults ratingGroups={this.state.ratingGroups} />
       </div>
     );
   }

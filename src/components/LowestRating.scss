@@ -1,0 +1,10 @@
+.lowest-rating {
+  border: 2px solid #34B690;
+  padding: 1em;
+  display: flex;
+
+  &__icon {
+    height: 6em;
+    width: auto;
+  }
+}
