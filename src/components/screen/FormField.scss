@@ -1,0 +1,10 @@
+.form-field {
+  padding: 0.5em 0;
+  font-weight: bold;
+
+  &__input {
+    padding: 1em;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+}
