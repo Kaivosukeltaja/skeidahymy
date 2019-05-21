@@ -1,0 +1,15 @@
+.rating-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em 0;
+
+  &__title {
+    font-size: 1.25em;
+    font-weight: bold;    
+  }
+
+  &__description {
+    color: #666666;
+  }
+}

@@ -8,6 +8,6 @@ const findWorstRating = (values) => {
   return worstRating.rating;
 }
 
-const valueOfRating = (rating) => ( ratingValues[rating.rating]);
+const valueOfRating = (rating) => ratingValues[rating.rating];
 
 export default findWorstRating;

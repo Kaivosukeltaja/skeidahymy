@@ -1,4 +1,5 @@
 import React from 'react';
+import './Header.scss';
 import { ReactComponent as Logo } from '../assets/logo.svg';
 
 const Header = () => {

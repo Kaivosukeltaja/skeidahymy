@@ -1,4 +1,5 @@
 import React from 'react';
+import './RatingGroup.scss';
 import RatingSelect from './RatingSelect';
 
 const RatingGroup = ({ group, onChange }) => {

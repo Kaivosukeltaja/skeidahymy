@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &__logo {
+    height: 10rem;
+    width: auto;
+    margin: 0 1rem 1rem 1rem;
+  }
+
+  &__bar {
+    flex-grow: 1;
+    padding: 1rem;
+    color: #ffffff;
+    background-color: #34B690;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+
+  &__title {
+    @media print {
+      display: none;
+    }
+
+    &--print {
+      display: none;
+      @media print {
+        display: block;
+      }
+    }
+  }
+}

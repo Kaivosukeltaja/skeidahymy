@@ -1,7 +1,7 @@
 import React from 'react';
 import './LowestRating.scss';
-import findWorstRating from '../helpers/findWorstRating';
-import RatingIcon from './RatingIcon';
+import findWorstRating from '../../helpers/findWorstRating';
+import RatingIcon from '../RatingIcon';
 
 
 const LowestRating = ({ ratingGroups }) => {
