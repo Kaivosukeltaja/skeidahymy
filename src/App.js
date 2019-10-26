@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.scss';
 import { ratingGroups } from './data';
 import PrintResults from './components/print/PrintResults';
 import Header from './components/Header';
@@ -52,7 +51,12 @@ class App extends Component {
           changeRating={this.changeRating}
           changeFieldValue={this.changeFieldValue}
         />
-        <PrintResults ratingGroups={this.state.ratingGroups} />
+        <PrintResults
+          ratingGroups={this.state.ratingGroups}
+          placeName={this.state.placeName}
+          placeAddress={this.state.placeAddress}
+          notes={this.state.notes}
+        />
       </div>
     );
   }
