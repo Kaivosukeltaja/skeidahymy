@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import './FormField.scss';
 
 const FormField = ({ value, label, onChange, large = false }) => {
@@ -14,5 +16,12 @@ const FormField = ({ value, label, onChange, large = false }) => {
     </div>
   );
 };
+
+FormField.propTypes = {
+  value: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  large: PropTypes.bool,
+}
 
 export default FormField;

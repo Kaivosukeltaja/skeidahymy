@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import './PrintResults.scss';
 import LowestRating from './LowestRating';
 
@@ -21,5 +23,11 @@ const PrintResults = ({ ratingGroups, placeName, placeAddress }) => {
     </div>
   );
 };
+
+PrintResults.propTypes = {
+  ratingGroups: PropTypes.arrayOf(PropTypes.object),
+  placeName: PropTypes.string.isRequired,
+  placeAddress: PropTypes.string.isRequired,
+}
 
 export default PrintResults;

@@ -33,7 +33,7 @@ class App extends Component {
   changeFieldValue(name) {
     return (event) => {
       const value = event.target.value;
-      this.setState((state) => ({
+      this.setState(() => ({
         [name]: value,
       }));
     }

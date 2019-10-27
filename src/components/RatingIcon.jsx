@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { ReactComponent as GreatIcon } from '../assets/great.svg';
 import { ReactComponent as GoodIcon } from '../assets/good.svg';
 import { ReactComponent as OkIcon } from '../assets/ok.svg';
@@ -15,6 +16,10 @@ const RatingIcon = ({ rating, ...rest }) => {
     default:
       return <BadIcon {...rest} />
   }
+};
+
+RatingIcon.propTypes = {
+  rating: PropTypes.oneOf(['great', 'good', 'ok']),
 };
 
 export default RatingIcon;

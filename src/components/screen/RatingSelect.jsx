@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const RatingSelect = ({ onChange }) => {
   return (
@@ -11,6 +12,10 @@ const RatingSelect = ({ onChange }) => {
       </select>
     </div>
   );
+};
+
+RatingSelect.propTypes = {
+  onChange: PropTypes.func.isRequired,
 };
 
 export default RatingSelect;
