@@ -1,6 +1,6 @@
 import React from 'react';
 import './LowestRating.scss';
-import findWorstRating from '../../helpers/findWorstRating';
+import findWorstRating from '../../helpers/findWorstRating'
 import RatingIcon from '../RatingIcon';
 
 
